@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>KDT계좌</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js"></script>
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 375px;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <header>
+            <div class="header-wrap">
+              <div class="header_profile">
+                <img src="./images/Yuna.jpg" alt="avatar_main">
+              </div>
+              <div class="header_title">생활비</div>
+              <div class="header_icon">
+              <div class="qr">
+                <img src="./images/icon_qr.svg" alt="icon_qr">
+              </div>
+              <div class="search">
+                <img src="./images/icon_search.svg" alt="icon_search">
+              </div>
+            </div>
+            </div>
+          </header>
+          <section class="account">
+            <div class="account_list">
+              <div class="account_id">
+                <div class="account_number">355-673877-78773</div>
+                <button class="account_btn">이체</button>
+              </div>
+              <div class="account_money">
+                <span class="money">1,240,000</span>
+                <span>원</span>
+              </div>
+              <div class="account_stats">
+                <input type="range"/>
+                <button class="account_stats-btn" id="expenseOpen">
+                  <img src="./images/icon_chart.svg" alt="icon_chart">
+                </button>
+              </div>
+              <div class="account_msg">5일동안 210,000원 남음</div>
+            </div>
+            <span class="account_banner">
+              지금 낮은 이자로 생활대출을 신청하세요!
+              <a href="javascript::void(0)">Go</a>
+            </span>
+          </section>
+          <!-- section - history -->
+          <section class="history">
+          <div class="history_detail-bar"></div>
+          <!--추후 결정-->
+          <div class="history_sliderlist">
+            <div class="histroy_sliderlist-item">여행가자!</div>
+            <div class="histroy_sliderlist-item">여행가자!</div>
+            <div class="histroy_sliderlist-item">여행가자!</div>
+            <button class="history_sliderlist-btn">저금통 만들기</button>
+          </div>
+          <div class="history_detail">
+            <div class="history_detail-header">
+              <span>오늘</span><span>27,600원 지출</span>
+            </div>
+            <ul class="history_detail-list">
+              <!--li 들어갈 자리-->
+            </ul>
+          </div>
+          <div class="history_detail">
+            <div class="history_detail-header">
+              <span>어제</span><span>27,600원 지출</span>
+            </div>
+            <ul class="history_detail-list">
+              <!--li 들어갈 자리-->
+            </ul>
+          </div>
+          </section>
+
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+    </div>
+
+<!-- 지출관리 -->
+<section class="expense" id="expense">
+  <button class="expense-close" id="expenseClose">닫기</button>
+  <h2>지출 관리</h2>
+</section>
+
+
+<!-- 푸터 -->
+    <nav>
+        <ul>
+          <li>
+            <img src="./images/nav_icon_home.svg" alt="nav_icon_home">
+          </li>
+          <li>
+            <img src="./images/nav_icon_arrow.svg" alt="nav_icon_arrow">
+          </li>
+          <li>
+            <img src="./images/nav_icon_skpyMsg.svg" alt="nav_icon_skpyMsg">
+          </li>
+          <li>
+            <img src="./images/nav_icon_more.svg" alt="nav_icon_more">
+          </li>
+        </ul>
+      </nav>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+      });
+ 
+      
+    </script>
+  </body>
+</html>
